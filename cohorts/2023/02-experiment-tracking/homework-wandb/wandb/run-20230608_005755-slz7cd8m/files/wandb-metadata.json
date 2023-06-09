@@ -1,0 +1,51 @@
+{
+    "os": "Windows-10-10.0.19044-SP0",
+    "python": "3.9.16",
+    "heartbeatAt": "2023-06-07T14:57:56.702462",
+    "startedAt": "2023-06-07T14:57:55.375635",
+    "docker": null,
+    "cuda": null,
+    "args": [
+        "--wandb_project",
+        "mlops-zoomcamp-wandb",
+        "--wandb_entity",
+        "aammari",
+        "--raw_data_path",
+        "data",
+        "--dest_path",
+        "./output"
+    ],
+    "state": "running",
+    "program": "C:\\Users\\AAMMARI\\github\\mlops-zoomcamp\\cohorts\\2023\\02-experiment-tracking\\homework-wandb\\preprocess_data.py",
+    "codePath": "cohorts\\2023\\02-experiment-tracking\\homework-wandb\\preprocess_data.py",
+    "git": {
+        "remote": "https://github.com/anammari/mlops-zoomcamp.git",
+        "commit": "b32ce42e9685fd1fad871eddeb094d6ef68899e1"
+    },
+    "email": "ammariect@gmail.com",
+    "root": "C:/Users/AAMMARI/github/mlops-zoomcamp",
+    "host": "4180L-211579-W",
+    "username": "aammari",
+    "executable": "C:\\Users\\AAMMARI\\.conda\\envs\\wandb\\python.exe",
+    "cpu_count": 4,
+    "cpu_count_logical": 8,
+    "cpu_freq": {
+        "current": 2803.0,
+        "min": 0.0,
+        "max": 2803.0
+    },
+    "cpu_freq_per_core": [
+        {
+            "current": 2803.0,
+            "min": 0.0,
+            "max": 2803.0
+        }
+    ],
+    "disk": {
+        "total": 471.55858993530273,
+        "used": 275.0545425415039
+    },
+    "memory": {
+        "total": 15.687675476074219
+    }
+}

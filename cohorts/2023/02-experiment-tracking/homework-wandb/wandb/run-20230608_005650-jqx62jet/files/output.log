@@ -1,0 +1,24 @@
+Traceback (most recent call last):
+  File "C:\Users\AAMMARI\github\mlops-zoomcamp\cohorts\2023\02-experiment-tracking\homework-wandb\preprocess_data.py", line 96, in <module>
+    run_data_prep()
+  File "C:\Users\AAMMARI\.conda\envs\wandb\lib\site-packages\click\core.py", line 1130, in __call__
+    return self.main(*args, **kwargs)
+  File "C:\Users\AAMMARI\.conda\envs\wandb\lib\site-packages\click\core.py", line 1055, in main
+    rv = self.invoke(ctx)
+  File "C:\Users\AAMMARI\.conda\envs\wandb\lib\site-packages\click\core.py", line 1404, in invoke
+    return ctx.invoke(self.callback, **ctx.params)
+  File "C:\Users\AAMMARI\.conda\envs\wandb\lib\site-packages\click\core.py", line 760, in invoke
+    return __callback(*args, **kwargs)
+  File "C:\Users\AAMMARI\github\mlops-zoomcamp\cohorts\2023\02-experiment-tracking\homework-wandb\preprocess_data.py", line 59, in run_data_prep
+    df_train = read_dataframe(
+  File "C:\Users\AAMMARI\github\mlops-zoomcamp\cohorts\2023\02-experiment-tracking\homework-wandb\preprocess_data.py", line 17, in read_dataframe
+    df = pd.read_parquet(filename)
+  File "C:\Users\AAMMARI\.conda\envs\wandb\lib\site-packages\pandas\io\parquet.py", line 509, in read_parquet
+    return impl.read(
+  File "C:\Users\AAMMARI\.conda\envs\wandb\lib\site-packages\pandas\io\parquet.py", line 220, in read
+    path_or_handle, handles, kwargs["filesystem"] = _get_path_or_handle(
+  File "C:\Users\AAMMARI\.conda\envs\wandb\lib\site-packages\pandas\io\parquet.py", line 110, in _get_path_or_handle
+    handles = get_handle(
+  File "C:\Users\AAMMARI\.conda\envs\wandb\lib\site-packages\pandas\io\common.py", line 868, in get_handle
+    handle = open(handle, ioargs.mode)
+FileNotFoundError: [Errno 2] No such file or directory: 'data\\green_tripdata_2022-01.parquet'

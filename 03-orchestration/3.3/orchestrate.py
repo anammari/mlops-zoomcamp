@@ -118,7 +118,7 @@ def main_flow(
 
     # MLflow settings
     mlflow.set_tracking_uri("sqlite:///mlflow.db")
-    mlflow.set_experiment("nyc-taxi-experiment")
+    mlflow.set_experiment("nyc-taxi-experiment-2")
 
     # Load
     df_train = read_data(train_path)

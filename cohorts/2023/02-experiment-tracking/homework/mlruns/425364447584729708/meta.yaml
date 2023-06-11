@@ -1,0 +1,6 @@
+artifact_location: file:///home/ubuntu/mlops-zoomcamp/cohorts/2023/02-experiment-tracking/homework/mlruns/425364447584729708
+creation_time: 1685632392222
+experiment_id: '425364447584729708'
+last_update_time: 1685632392222
+lifecycle_stage: active
+name: random-forest

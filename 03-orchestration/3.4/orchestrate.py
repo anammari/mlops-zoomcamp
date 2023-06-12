@@ -9,6 +9,11 @@ from sklearn.metrics import mean_squared_error
 import mlflow
 import xgboost as xgb
 from prefect import flow, task
+import os.path
+
+# globals directories path
+ROOT_DIR = os.path.dirname(os.path.abspath(__file__))
+DATA_DIR = os.path.join(ROOT_DIR, 'data')
 
 
 @task(retries=3, retry_delay_seconds=2)
@@ -111,8 +116,8 @@ def train_best_model(
 
 @flow
 def main_flow(
-    train_path: str = "./03-orchestration/data/green_tripdata_2021-01.parquet",
-    val_path: str = "./03-orchestration/data/green_tripdata_2021-02.parquet",
+    train_path: str = os.path.join(DATA_DIR, "green_tripdata_2021-01.parquet"),
+    val_path: str = os.path.join(DATA_DIR, "green_tripdata_2021-02.parquet"),
 ) -> None:
     """The main training pipeline"""
 

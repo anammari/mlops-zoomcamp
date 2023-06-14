@@ -9,7 +9,9 @@ from sklearn.metrics import mean_squared_error
 import mlflow
 import xgboost as xgb
 from prefect import flow, task
+from prefect.artifacts import create_markdown_artifact
 import os.path
+from datetime import date
 
 # globals directories path
 ROOT_DIR = os.path.dirname(os.path.abspath(__file__))
@@ -111,19 +113,37 @@ def train_best_model(
         mlflow.log_artifact("models/preprocessor.b", artifact_path="preprocessor")
 
         mlflow.xgboost.log_model(booster, artifact_path="models_mlflow")
+    
+        markdown__rmse_report = f"""# RMSE Report
+
+        ## Summary
+
+        Duration Prediction 
+
+        ## RMSE XGBoost Model
+
+        | Region    | RMSE |
+        |:----------|-------:|
+        | {date.today()} | {rmse:.2f} |
+        """
+
+        create_markdown_artifact(
+            key="duration-model-report", markdown=markdown__rmse_report
+        )
+    
     return None
 
 
 @flow
 def main_flow(
-    train_path: str = os.path.join(DATA_DIR, "green_tripdata_2021-01.parquet"),
-    val_path: str = os.path.join(DATA_DIR, "green_tripdata_2021-02.parquet"),
+    train_path: str = os.path.join(DATA_DIR, "green_tripdata_2023-02.parquet"),
+    val_path: str = os.path.join(DATA_DIR, "green_tripdata_2023-03.parquet"),
 ) -> None:
     """The main training pipeline"""
 
     # MLflow settings
     mlflow.set_tracking_uri("sqlite:///mlflow.db")
-    mlflow.set_experiment("nyc-taxi-experiment-3")
+    mlflow.set_experiment("nyc-taxi-experiment-hw-q4")
 
     # Load
     df_train = read_data(train_path)

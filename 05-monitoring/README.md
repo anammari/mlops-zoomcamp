@@ -63,12 +63,10 @@
 </a>
 
 
-
-
 ## 5.8 Homework
 
 
-More information here: TBD
+More information [here](../cohorts/2023/05-monitoring/homework.md)
 
 
 ## Notes
@@ -119,7 +117,7 @@ To calculate evidently metrics with prefect and send them to database, execute:
 python evidently_metrics_calculation.py
 ```
 
-This script will simulate batch monitoring. Every 10 secinds it will collect data for a daily batch, cacluate metrics and insert them into database. This metrics will be avaliable in Grafana in preconfigured dashboard. 
+This script will simulate batch monitoring. Every 10 seconds it will collect data for a daily batch, calculate metrics and insert them into database. This metrics will be available in Grafana in preconfigured dashboard. 
 
 ### Accsess dashboard
 

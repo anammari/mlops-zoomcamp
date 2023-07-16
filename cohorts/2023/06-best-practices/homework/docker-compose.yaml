@@ -1,0 +1,8 @@
+services:
+  localstack:
+    image: localstack/localstack
+    ports:
+      - "4566-4583:4566-4583"
+    environment:
+      - AWS_REGION=us-east-1
+      - SERVICES=s3
